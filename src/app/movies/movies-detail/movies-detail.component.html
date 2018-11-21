@@ -1,0 +1,96 @@
+<div class="row">
+  <div class="col-xs-12">
+    <img src="{{incomingMovie?.poster}}" alt="{{incomingMovie.name}}" class="img-responsive" style="max-height: 300px">
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{incomingMovie?.name}}</h1>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="btn-group" appToggle>
+      <button style="cursor: pointer;" type="button" class="btn btn-primary dropdown-toggle">Manage
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li>
+          <a style="cursor: pointer;" (click)="editMovie()">Edit Movie</a>
+        </li>
+        <li>
+          <a style="cursor: pointer;" (click)="deleteMovie()">Delete Movie</a>
+        </li>
+      </ul>
+
+    </div>
+
+
+  </div>
+
+
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="container">
+      <h4>{{incomingMovie?.plot}}</h4>
+    </div>
+
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-xs-12">
+
+    <ul class="list-group" *ngFor="let act of incomingMovie.actors">
+      <li class="list-group-item">
+        <label for="">Actor Name:</label>
+        {{act?.name}}
+      </li>
+
+      <li class="list-group-item">
+        <label for="">Date of Birth:</label>
+        {{act?.birthDate}}
+      </li>
+
+      <li class="list-group-item">
+        <label for="">Gender:</label>
+        {{act?.gender}}
+      </li>
+
+      <li class="list-group-item">
+        <label for="">Bio Data:</label>
+        {{act?.bioData}}
+      </li>
+
+
+
+    </ul>
+    <ul class="list-group" >
+      <li class="list-group-item">
+        <label for="">Producer Name:</label>
+        {{incomingMovie.producers?.name}}
+      </li>
+
+      <li class="list-group-item">
+        <label for="">Date of Birth:</label>
+        {{incomingMovie.producers?.birthDate}}
+      </li>
+
+      <li class="list-group-item">
+        <label for="">Gender:</label>
+        {{incomingMovie.producers?.gender}}
+      </li>
+
+
+      <li class="list-group-item">
+        <label for="">Bio Data:</label>
+        {{incomingMovie.producers?.bioData}}
+      </li>
+
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="row">
+
+  <div class="col-xs-10">
+
+    <button class="btn btn-success" (click)="onSelectNew()">New Movie</button>
+  </div>
+</div>
+<hr style="width: 40rem; align-self: auto;">
+<div class="row">
+  <div class="col-xs-8">
+    <app-movies-item  *ngFor ="let moviesVar of movies; let i=index" 
+    [movies] = "moviesVar"
+    [index]= "i" ></app-movies-item>
+  </div>
+</div>

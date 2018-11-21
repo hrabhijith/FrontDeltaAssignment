@@ -1,0 +1,171 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="moviesForm">
+  <div class="row">
+    <div class="col-xs-12">
+      <button type="submit" class="btn btn-danger" [disabled]="!moviesForm.valid">Save</button>
+      <button type="button" class="btn btn-primary" (click)="onCancel()">Cancel</button>
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col-xs-12">.
+      <div class="form-group">
+        <label for="name" class="control-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" formControlName="name">
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="row">
+
+
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label for="year" class="control-label">Year of release</label>
+        <input type="number" class="form-control" id="year" name="year" formControlName="releaseYear">
+
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+
+
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label for="plot" class="control-label">Plot</label>
+        <input type="text" class="form-control" id="plot" name="plot" formControlName="plot">
+
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+
+
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label for="poster" class="control-label">Poster URL</label>
+        <input type="text" class="form-control" id="poster" name="poster" formControlName="poster" #imagePath>
+
+
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+
+    <div class="col-xs-12">
+      <img [src]=imagePath.value alt="" class="img-responsive">
+    </div>
+
+
+  </div>
+  <!-- <div class="row">
+
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label for="url">Description</label>
+        <textarea type="text" class="form-control" id="description" name="description" rows="4" formControlName="description"></textarea>
+      </div>
+    </div>
+  </div> -->
+  <!-- <ng-template *ngIf=""></ng-template> -->
+  <div class="row">
+    <div class="col-xs-12" formArrayName="actors">
+      <div *ngFor="let actor of formData.controls; let i=index" [formGroupName]="i" style="margin-top: 10px">
+        <div class="row">
+          <div class="col-xs-4">
+            <label for="actorName" class="control-label">Actor Name</label>
+            <input type="text" class="form-control" id="iName" name="actorName" formControlName="name">
+
+          </div>
+          <div class="col-xs-6">
+            <label class="radio-inline">Male
+              <input type="radio" style="height: 15px" class="form-control" value="male" id="gender" formControlName="gender">
+
+            </label>
+            <label class="radio-inline">Female
+              <input type="radio" style="height: 15px" class="form-control" id="gender" value="female" formControlName="gender">
+            </label>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-xs-4">
+            <label for="DOB" class="control-label">Date of Birth</label>
+            <input type="date" class="form-control" id="DOB" name="DOB" formControlName="birthDate">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-8">
+            <label for="bio" class="control-label">Bio Data</label>
+            <textarea type="text" class="form-control" id="bio" name="bio" formControlName="bioData"></textarea>
+          </div>
+          <div class="col-xs-2">
+
+            <button type="button" class="btn btn-danger" style="margin-top: 25px" (click)="onDeleteActor(i)">X</button>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="row">
+        <div class="col-xs-5">
+          <hr>
+          <button type="button" class="btn btn-primary" (click)="onAddNewActor()">Add New Actor</button>
+
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col-xs-12" formGroupName="producers" style="margin-top: 10px">
+      <div class="row">
+        <div class="col-xs-4">
+          <label for="producerName" class="control-label">Producer Name</label>
+          <input type="text" class="form-control" id="iName" name="producerName" formControlName="name">
+        </div>
+        <div class="col-xs-4">
+          <label class="radio-inline">Male
+            <input type="radio" class="form-control" style="height: 15px" value="male" id="gender" formControlName="gender">
+          </label>
+          <label class="radio-inline">Female
+            <input type="radio" class="form-control" style="height: 15px" value="female" id="gender" formControlName="gender">
+          </label>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-xs-4">
+          <label for="DOB" class="control-label">Date of Birth</label>
+          <input type="date" class="form-control" id="DOB" name="DOB" formControlName="birthDate">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-10">
+          <label for="bio" class="control-label">Bio Data</label>
+          <textarea type="text" class="form-control" id="bio" name="bio" formControlName="bioData"></textarea>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </div>
+
+</form>

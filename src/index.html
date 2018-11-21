@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>FrontDeltaAssignment</title>
@@ -8,7 +9,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyC7hKjgFkC7zSB5RZaC05MDwa7x9aFMUPM",
+        authDomain: "ng-delta.firebaseapp.com",
+        databaseURL: "https://ng-delta.firebaseio.com",
+        projectId: "ng-delta",
+        storageBucket: "ng-delta.appspot.com",
+        messagingSenderId: "517505996003"
+      };
+      firebase.initializeApp(config);
+    </script>
   <app-root></app-root>
+  
+
 </body>
+
 </html>

@@ -1,5 +1,5 @@
 {
-  "name": "front-delta-assignment",
+  "name": "frontdeltaassignment",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -12,16 +12,21 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~7.0.0",
-    "@angular/common": "~7.0.0",
+    "@angular/common": "~6.0.0",
     "@angular/compiler": "~7.0.0",
-    "@angular/core": "~7.0.0",
-    "@angular/forms": "~7.0.0",
-    "@angular/http": "~7.0.0",
-    "@angular/platform-browser": "~7.0.0",
+    "@angular/core": "^5.2.11",
+    "@angular/forms": "^6.0.0",
+    "@angular/http": "~6.0.0",
+    "@angular/platform-browser": "^5.2.11",
     "@angular/platform-browser-dynamic": "~7.0.0",
-    "@angular/router": "~7.0.0",
+    "@angular/router": "^5.2.11",
+    "bootstrap": "^3.3.7",
     "core-js": "^2.5.4",
+    "firebase": "^5.5.8",
+    "httpclient": "^0.1.0",
+    "jquery": "^3.3.1",
     "rxjs": "~6.3.3",
+    "rxjs-compat": "^6.3.3",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
@@ -44,5 +49,9 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.1.1"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.2.",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }
